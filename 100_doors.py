@@ -12,11 +12,10 @@ while s < 100:
         else:
             items[i] = 'c'
 
-
 for i in range(len(items)):
     if items[i] == 'o':
         open_door.append(i+1)
 
-open_door=str(open_door)
 
-print('folowing numbers: ' + open_door)
+
+print('folowing numbers: '+str(open_door))
