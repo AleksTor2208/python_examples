@@ -1,0 +1,28 @@
+print('Welcome to "Do_list". If You want to escape press "x".') 
+do_list=['wake_up', 'go_to_school', 'python', 'tea or coffee']
+list_of_command=['list', 'add', 'mark', 'archive']
+command = 0
+while command != 'x':
+    command = input("Please, specify a command [list, add, mark, archive]: ")
+    if command == 'list':
+        for a,b in enumerate(do_list): # a gives me the index number, b - is the value from the list
+            print(a+1, b)      
+    if command == 'add':    
+        issue=input('Add to list: ')
+        do_list.append(issue)
+        print('Item added!')
+        print('Check your list')
+        for a,b in enumerate(do_list): 
+            print(a+1, b) 
+        else: 
+            pass
+    if command == 'mark':
+        print('You saved the following to-do items.')
+        for a,b in enumerate(do_list): 
+            print(a+1, b) 
+        mark_list = int(input('Which one do you want to mark as completed?_'))
+        print(do_list[mark_list-1], 'is completed')
+        do_list[do_list.index(do_list[mark_list-1])] = ('[x] ' + do_list[mark_list-1]) # adds 'is complete' to the chosen item from the list   
+    if command == 'archive':
+        do_list.remove(do_list[mark_list-1])
+        print('All campleted tasks got deleted')
